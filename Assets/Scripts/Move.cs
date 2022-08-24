@@ -24,14 +24,11 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log("Velocidad: " + agent.velocity);
         if (Input.GetMouseButtonDown(0)){
             RaycastHit hit;
                 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
                 agent.destination = hit.point;
-                Debug.Log(agent.destination);
             }
         }
 
@@ -48,14 +45,10 @@ public class Move : MonoBehaviour
         if (agent.velocity == Vector3.zero)
         {
             animator.SetBool("isMoving", false);
-
-            Debug.Log("isMovingFalse");
-
         }
         else
         {
             animator.SetBool("isMoving", true);
-            Debug.Log("isMovingTrue");
         }
 
     }
