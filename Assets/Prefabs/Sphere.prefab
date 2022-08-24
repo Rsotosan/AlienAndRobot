@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7783342346598954099}
   - component: {fileID: 6806786624074041850}
   - component: {fileID: 1640804621078235931}
+  - component: {fileID: 6322700193379658408}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Banana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,3 +115,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6322700193379658408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330170972065249519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c61b854aadd4f439a40df50a1c987d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

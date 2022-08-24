@@ -60,8 +60,14 @@ public class TreeClick : MonoBehaviour
                 Debug.Log("ESTAS TALANDO EL JODIDO ARBOL");
                 TreeComponents components = treeChop.GetComponent<TreeComponents>();
 
-                foreach (GameObject banana in components.getBananas()){
-                    banana.GetComponent<Rigidbody>().useGravity = true;
+                foreach (GameObject banana in components.getBananas()) {
+                    Rigidbody bananaRB = banana.GetComponent<Rigidbody>();
+                    bananaRB.useGravity = true;
+                    float xforce = Random.Range(-0.8f, 0.8f);
+                    bananaRB.AddForce(xforce, 2.8f, 0);
+               
+
+
                 }
             }
         }
