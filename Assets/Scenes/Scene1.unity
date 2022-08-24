@@ -324,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193767319}
+  - component: {fileID: 193767320}
   m_Layer: 0
   m_Name: padre
   m_TagString: Untagged
@@ -346,6 +347,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193767320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193767318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcc7a085f173c74a88d594d4480a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointPrefab: {fileID: 3750530912494523766, guid: 244a5e2d4f6e5114589be954284ec3cc, type: 3}
 --- !u!1001 &275201683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,9 +367,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4363992483936175737, guid: 7a0d4d989851e0a488545c30d5a606fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8350573957859275673, guid: 7a0d4d989851e0a488545c30d5a606fd, type: 3}
       propertyPath: m_Name
       value: Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350573957859275673, guid: 7a0d4d989851e0a488545c30d5a606fd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8694448025103509795, guid: 7a0d4d989851e0a488545c30d5a606fd, type: 3}
       propertyPath: m_RootOrder
@@ -415,7 +437,6 @@ GameObject:
   - component: {fileID: 340711961}
   - component: {fileID: 340711960}
   - component: {fileID: 340711959}
-  - component: {fileID: 340711963}
   - component: {fileID: 340711964}
   m_Layer: 0
   m_Name: tree
@@ -503,19 +524,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &340711963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340711958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcc7a085f173c74a88d594d4480a13e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointPrefab: {fileID: 3750530912494523766, guid: 244a5e2d4f6e5114589be954284ec3cc, type: 3}
 --- !u!114 &340711964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +729,7 @@ GameObject:
   - component: {fileID: 1973687741}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
