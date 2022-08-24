@@ -27,18 +27,11 @@ public class BananaMovement : MonoBehaviour
             timer += Time.deltaTime;
            
             if(timer >= nextChange) {
-
                 nextChange = Random.Range(1f, 3f);
 
                 rb.velocity = new Vector3(randomForce(), Random.Range(1, 4), randomForce());
-
-
-              
                 
                 timer = 0f;
-
-              
-
             }
 
 

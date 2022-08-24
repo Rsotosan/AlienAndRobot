@@ -20,9 +20,7 @@ public class TreeClick : MonoBehaviour
         name = this.GetComponent<Transform>().name;
         alien = GameObject.Find("Alien").transform;
 
-        Transform sphera = GameObject.Instantiate(pointPrefab);
-        TreeComponents components = GameObject.Find("tree").GetComponent<TreeComponents>();
-        components.addBanana(sphera.gameObject);
+        generateBananas();
 
     }
     void Update(){
@@ -57,7 +55,6 @@ public class TreeClick : MonoBehaviour
 
         if(Physics.Raycast(theRay, out RaycastHit hit, 1)){
             if(hit.transform == treeChop){
-                Debug.Log("ESTAS TALANDO EL JODIDO ARBOL");
                 TreeComponents components = treeChop.GetComponent<TreeComponents>();
 
                 foreach (GameObject banana in components.getBananas()) {
@@ -65,13 +62,27 @@ public class TreeClick : MonoBehaviour
                     bananaRB.useGravity = true;
                     float xforce = Random.Range(-0.8f, 0.8f);
                     bananaRB.AddForce(xforce, 2.8f, 0);
-               
-
-
                 }
             }
         }
         
 
     }  
+
+
+    void generateBananas(){
+
+        foreach(GameObject tree in GameObject.FindGameObjectsWithTag("Tree")){
+
+            for (int i = 0; i < 5; i++)
+            {
+                Transform sphera = GameObject.Instantiate(pointPrefab);
+                TreeComponents components = tree.GetComponent<TreeComponents>();
+                components.addBanana(sphera.gameObject); 
+            }
+            
+        }
+
+        
+    }
 }
