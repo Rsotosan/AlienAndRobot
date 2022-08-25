@@ -10,6 +10,8 @@ public class BananaMovement : MonoBehaviour
     float timer;
     float nextChange;
     // Start is called before the first frame update
+
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,10 +20,6 @@ public class BananaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        Debug.Log("Vector aleatorio:" + randomForce());
-
         if (firstTimeTouching == false)
         {
             timer += Time.deltaTime;
