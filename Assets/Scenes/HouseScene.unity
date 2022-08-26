@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.3207547, g: 0.013314332, b: 0.013314332, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -579,7 +579,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -637,7 +637,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730092844}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.061628457, y: 0.70441604, z: 0.70441604, w: 0.061628457}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1136,17 +1136,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - PLACE HOLDER
-  - I am Robot
-  - I am Alien
-  - Nice to meet you
-  - You are gay
-  - I am not gay, I am Robot
-  - Maybe you are both
-  - Both? Who is both
-  - You are definetily gay
+  - PLACEHOLDER
+  - 1; Hi, mornin. Ship broke down.
+  - 2;Oh! Visit! I've got visit after 200 Ako's years!
+  - 1;Ako's years?
+  - 2;YEAH! That's me, Ako. And this is my planet
+  - 2;WELCOME :)
+  - 2; I think I've got pie somewhere...
+  - 2; to celebrate, and after the party we can...
+  - 1; Slow down, mate
+  - 1;I don't wanna be rude or anithin'
+  - 1; I just wanna leave this ro... Planet.
+  - 1; Do you happen to have some Babanos you could spare?
+  - 2; Babanos? I do. There are plenty here.
+  - 2; Wait. You said that you wanted to leave?
+  - 1; Yeah, sorry mate. I gotta go, I have things to do
+  - 2; What things do you have to do?
+  - 1; I am a... Space Explorer!
+  - 2; Wow :O
+  - 1;Yeah... Cool, right? So, about the Babanos...
+  - 2;I have got plenty in here.
+  - '1; (This guy doesn''t know how valuable they are) '
+  - 1; So would you be a good lad
+  - 1; And get me some of them?
+  - 2; Sure... For your ship... but after that you will leave?
+  - 1; Yep
+  - 2; :(
+  - 1; ...
+  - 2; ...
+  - 2; Well. How many do you need?
+  - 1; Just two... You know? As many as you can give me
+  - 2;Ok, I will get them for you.
+  - 2;It is a pity, I had this cake...
+  - 1;...
+  - 2;...
   robotDialogue: {fileID: 408088815}
   alienDialogue: {fileID: 633831381}
+  robotButton: {fileID: 1780079846}
+  alienButton: {fileID: 1968447304}
 --- !u!4 &1646550562
 Transform:
   m_ObjectHideFlags: 0
@@ -1219,6 +1246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+--- !u!1 &1780079846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4075657611900120102, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+  m_PrefabInstance: {fileID: 2130336507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1794493084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1322,6 +1354,10 @@ PrefabInstance:
     - target: {fileID: 4075657611900120098, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075657611900120099, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_PreferredWidth
+      value: 381.26
       objectReference: {fileID: 0}
     - target: {fileID: 4075657611900120102, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
       propertyPath: m_Name
@@ -1441,6 +1477,14 @@ PrefabInstance:
 
         is Peter Jackson.'
       objectReference: {fileID: 0}
+    - target: {fileID: 4075657612784640344, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
+    - target: {fileID: 4075657612784640344, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4833476452115874024, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
     - target: {fileID: 4075657612784640346, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
       propertyPath: m_Name
       value: alienAnswer
@@ -1646,6 +1690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98e65c39d212014681ba7b234ebe827, type: 3}
+--- !u!1 &1968447304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4075657611900120102, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+  m_PrefabInstance: {fileID: 1800613934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2016294744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1929,6 +1978,18 @@ PrefabInstance:
       propertyPath: m_Colors.m_DisabledColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4075657611900120098, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075657611900120098, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075657611900120098, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4075657611900120099, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
       propertyPath: m_PreferredWidth
       value: 381.26
@@ -2112,3 +2173,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74ca2a505457fd141a6b315f38da51b4, type: 3}
+--- !u!1001 &2991264883404292205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1145082604994037663, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_Name
+      value: LightningManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4907045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2646511
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.0807564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644774371429195075, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1c5f97892e37bb48b88291b8f8b965f, type: 3}

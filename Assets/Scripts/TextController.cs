@@ -11,10 +11,15 @@ public class TextController : MonoBehaviour
     TextMeshProUGUI robotDialogue;
     [SerializeField]
     TextMeshProUGUI alienDialogue;
+    [SerializeField]
+    GameObject robotButton;
+    [SerializeField]
+    GameObject alienButton;
+    
 
     //botonalien
     //
-    
+
     private int counter = 0;
 
 
@@ -25,6 +30,7 @@ public class TextController : MonoBehaviour
  
         robotDialogue.text = "Haz click en cualquier lugar de la pantalla para iniciar el diálogo";
         alienDialogue.text = "";
+        alienButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,17 +48,34 @@ public class TextController : MonoBehaviour
 
             if (counter <= texts.Count)
             {
-                //if counter es impar
+     
 
-                string clave = texts[counter].Split(";")[0];
+                string[]dividedText = texts[counter].Split(";",2);
 
-                string texto = texts[counter].Split(";")[1];
 
-                //counter par
+                string key = dividedText[0];
+                string text = dividedText[1];
 
-                robotDialogue.text = texts[counter - 1];
-                alienDialogue.text = texts[counter];
-                state = false;
+
+                if (key.Equals("1"))
+                {
+                    alienButton.SetActive(false);
+                    robotButton.SetActive(true);
+                    robotDialogue.text = text;
+                    state = false;
+                }
+
+                if (key.Equals("2"))
+                {
+                    robotButton.SetActive(false);
+                    alienButton.SetActive(true);
+                    alienDialogue.text = text;
+                    state = false;
+                }
+                
+
+                }
+       
             }
             else
             {
@@ -67,4 +90,4 @@ public class TextController : MonoBehaviour
     }
 
 
-}
+
