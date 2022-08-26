@@ -6,17 +6,18 @@ public class HighlightTrees : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    cakeslice.Outline lastTree = null;
+    Transform lastTree = null;
 
     // Update is called once per frame
     void Update()
     {
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 100)) {
             if(hit.transform.tag == "Tree"){
-                lastTree = hit.transform.gameObject.GetComponent<cakeslice.Outline>();
-                lastTree.enabled = true;
+                if(lastTree != null && hit.transform.name != lastTree.name) lastTree.gameObject.GetComponent<cakeslice.Outline>().enabled = false;
+                lastTree = hit.transform;
+                lastTree.gameObject.GetComponent<cakeslice.Outline>().enabled = true;
             } else if(lastTree != null){
-                lastTree.enabled = false;
+                lastTree.gameObject.GetComponent<cakeslice.Outline>().enabled = false;
             }
         }
     }

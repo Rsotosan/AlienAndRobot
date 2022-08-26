@@ -7,8 +7,6 @@ public class TreeComponents: MonoBehaviour
 
     List<GameObject> bananas = new List<GameObject>();
 
-    public List<HashSet<string>> test;
-
     public List<GameObject> getBananas(){
         return bananas;
     }
@@ -17,4 +15,11 @@ public class TreeComponents: MonoBehaviour
         bananas.Add(banana);
     }
 
+    public void clear(){
+        bananas.Clear();
+    }
+
+    public bool haveBananas(){
+        return bananas.Count > 0;
+    }
 }

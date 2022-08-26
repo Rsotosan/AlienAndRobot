@@ -25,7 +25,7 @@ public class Move : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)){
             RaycastHit hit;
-                
+            
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
                 agent.isStopped = false;
                 if(hit.transform.tag == "Tree"){
@@ -72,9 +72,5 @@ public class Move : MonoBehaviour
             animator.SetBool("isMoving", true);
         }
 
-    }
-
-    private void OnCollisionEnter(Collision other) {
-        agent.isStopped = true;
     }
 }
