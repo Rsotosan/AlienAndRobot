@@ -28,7 +28,9 @@ public class BananaMovement : MonoBehaviour
                 nextChange = Random.Range(1f, 3f);
 
                 rb.velocity = new Vector3(randomForce(), Random.Range(1, 4), randomForce());
-                
+
+               //rb.AddForce(new Vector3(randomForce(), Random.Range(1, 4), randomForce()),ForceMode.Acceleration);
+
                 timer = 0f;
             }
 

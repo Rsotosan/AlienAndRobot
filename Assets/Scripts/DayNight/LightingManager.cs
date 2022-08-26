@@ -14,6 +14,8 @@ public class LightingManager : MonoBehaviour
     //variable to measure time
     [SerializeField, Range(0, 24)] private float TimeOfDay;
     // Start is called before the first frame update
+
+    public static bool isDayFinished;
     void Start()
     {
         
@@ -25,11 +27,19 @@ public class LightingManager : MonoBehaviour
         if (Preset == null)
             return;
 
-        if(Application.isPlaying)
+        if(Application.isPlaying &&  !isDayFinished)
         {
-            TimeOfDay += Time.deltaTime * 0.4f;
+            TimeOfDay += Time.deltaTime * 0.1f;
             TimeOfDay %= 24; //clamp between 0-24
             UpdateLighting(TimeOfDay / 24f);
+
+            Debug.Log(TimeOfDay);
+            if (TimeOfDay >= 23.50f)
+            {
+                isDayFinished = true;
+
+                Debug.Log("The day has finished");
+            }
         }
         else
         {
@@ -71,4 +81,6 @@ public class LightingManager : MonoBehaviour
             }
         }
     }
+
+
 }
