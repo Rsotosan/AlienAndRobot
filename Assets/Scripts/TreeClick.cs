@@ -39,19 +39,9 @@ public class TreeClick : MonoBehaviour
 
                 }
             }
+        } else {
+            treeChop = null;
         }
-
-        /**
-        if(Physics.Raycast(theRay, out RaycastHit hit, 1)){
-            if(hit.transform == treeChop){
-                Debug.Log("ESTAS TALANDO EL JODIDO ARBOL");
-                foreach (Transform banana in treeChop.transform.Find("bananas")){
-                    banana.GetComponent<Rigidbody>().useGravity = true;
-                }
-            }
-
-        }
-        */
 
         if(Physics.Raycast(theRay, out RaycastHit hit, 1)){
             if(hit.transform == treeChop){
@@ -59,9 +49,12 @@ public class TreeClick : MonoBehaviour
 
                 foreach (GameObject banana in components.getBananas()) {
                     Rigidbody bananaRB = banana.GetComponent<Rigidbody>();
-                    bananaRB.useGravity = true;
-                    float xforce = Random.Range(-0.8f, 0.8f);
-                    bananaRB.AddForce(xforce, 2.8f, 0);
+                    if(bananaRB.useGravity == false){
+                        Debug.Log("Impulso bananil");
+                        bananaRB.useGravity = true;
+                        float xforce = Random.Range(-0.8f, 0.8f);
+                        bananaRB.AddForce(xforce, 20f, 0);
+                    }
                 }
             }
         }
@@ -73,11 +66,20 @@ public class TreeClick : MonoBehaviour
     void generateBananas(){
 
         foreach(GameObject tree in GameObject.FindGameObjectsWithTag("Tree")){
+            List<int[]> positions = getPositionsRandom(Random.Range(0, 8));
 
-            for (int i = 0; i < 5; i++)
+            foreach(int[] pos in positions)
             {
                 Transform sphera = GameObject.Instantiate(pointPrefab);
                 TreeComponents components = tree.GetComponent<TreeComponents>();
+
+
+                
+
+                Vector3 position = new Vector3(tree.transform.position.x + pos[0] , tree.GetComponent<MeshFilter>().mesh.bounds.extents.y * tree.transform.localScale.y + tree.transform.position.y  , tree.transform.position.z + pos[1]);
+
+                sphera.position = position;
+                
                 components.addBanana(sphera.gameObject); 
             }
             
@@ -85,4 +87,30 @@ public class TreeClick : MonoBehaviour
 
         
     }
+
+    List<int[]> getPositionsRandom(int num){
+        List<int[]> positions = getPositions();
+        int size = positions.Count;
+        for (int i = 0; i < size - num; i++)
+        {
+            positions.RemoveAt(Random.Range(0, positions.Count));
+        }
+        return positions;
+    }
+    List<int[]> getPositions(){
+        int distance = 1;
+        List<int[]> positions = new List<int[]>();
+        positions.Add(new int[]{distance, 0});
+        positions.Add(new int[]{-distance, 0});
+        positions.Add(new int[]{distance, distance});
+        positions.Add(new int[]{0, distance});
+        positions.Add(new int[]{-distance, -distance});
+        positions.Add(new int[]{0, -distance});
+        positions.Add(new int[]{distance, -distance});
+        positions.Add(new int[]{-distance, distance});
+        return positions;
+    }
+
+    
+    
 }

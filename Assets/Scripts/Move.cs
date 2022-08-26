@@ -18,7 +18,6 @@ public class Move : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
@@ -28,8 +27,30 @@ public class Move : MonoBehaviour
             RaycastHit hit;
                 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
-                agent.destination = hit.point;
+                agent.isStopped = false;
+                if(hit.transform.tag == "Tree"){
+                    NavMeshHit myNavHit;
+                    if(NavMesh.SamplePosition(hit.transform.position, out myNavHit, 100 , -1))
+                    {
+                        agent.destination = myNavHit.position;
+                    }
+                }
+                else {
+                    agent.destination = hit.point;
+                }
             }
+
+            if(agent.remainingDistance < agent.stoppingDistance) 
+            {
+             agent.updateRotation = false;
+            Debug.Log("Rotando hacia arbol");
+             GameObject.Find("Alien").transform.rotation = Quaternion.LookRotation(agent.destination);
+            }
+            else {
+                agent.updateRotation = true;
+            }
+
+
         }
 
         //player.MovePosition(agent.destination);
@@ -51,5 +72,9 @@ public class Move : MonoBehaviour
             animator.SetBool("isMoving", true);
         }
 
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        agent.isStopped = true;
     }
 }
