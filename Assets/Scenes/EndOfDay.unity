@@ -1025,12 +1025,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts:
   - PLACEHOLDER
-  - '1; You brought me only 5 bananas I''ll have to kill you bipbop You brought me
-    only 5 bananas I''ll have to kill you bipbop     '
+  - 1; It has been a very, very long day
+  - 2; I love long days
+  - '3;  '
+  - 2;I promise I'll bring you more tomorrow
+  - 1; I hope so
   robotDialogue: {fileID: 408088815}
   alienDialogue: {fileID: 633831381}
   robotButton: {fileID: 1780079846}
   alienButton: {fileID: 1968447304}
+  firstText: 
+  nextSceneToLoad: 
 --- !u!4 &1646550562
 Transform:
   m_ObjectHideFlags: 0
@@ -1746,11 +1751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356818670063900357, guid: 45751b47c8c26f4499a6cc9f3afaf62c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -112
+      value: -111.99994
       objectReference: {fileID: 0}
     - target: {fileID: 2356818670063900357, guid: 45751b47c8c26f4499a6cc9f3afaf62c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -125.9989
+      value: -125.99902
       objectReference: {fileID: 0}
     - target: {fileID: 2356818670254275600, guid: 45751b47c8c26f4499a6cc9f3afaf62c, type: 3}
       propertyPath: m_SizeDelta.x
