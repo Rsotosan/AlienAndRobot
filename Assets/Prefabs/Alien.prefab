@@ -1892,9 +1892,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8350573957859275673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dff51283673d504787ecad133976811, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d0308631d0eb534aa403f598f533062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  babanoUi: {fileID: 0}
 --- !u!1 &8354030500997169569
 GameObject:
   m_ObjectHideFlags: 0

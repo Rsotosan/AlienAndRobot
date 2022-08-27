@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class WhenTheDayIsOver : MonoBehaviour
 {
+
+    [SerializeField]
+    GameObject textBoxBeforeChangingScene;
+
+    TextController textScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        textScript = GetComponent<TextController>();    
     }
 
     // Update is called once per frame
@@ -15,7 +20,8 @@ public class WhenTheDayIsOver : MonoBehaviour
     {
         if (LightingManager.isDayFinished)
         {
-            Debug.Log("THE DAY HAS FINISHED");
+            textBoxBeforeChangingScene.SetActive(true);
+            textScript.enabled = true;
         }
-    }
+    }   
 }

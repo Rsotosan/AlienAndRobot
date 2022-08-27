@@ -49,8 +49,6 @@ public class Move : MonoBehaviour
             else {
                 agent.updateRotation = true;
             }
-
-
         }
 
         //player.MovePosition(agent.destination);
@@ -58,8 +56,6 @@ public class Move : MonoBehaviour
         animationController();   
 
     }
-
-
 
     void animationController()
     {
@@ -71,6 +67,5 @@ public class Move : MonoBehaviour
         {
             animator.SetBool("isMoving", true);
         }
-
     }
 }
