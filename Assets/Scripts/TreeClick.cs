@@ -8,6 +8,9 @@ public class TreeClick : MonoBehaviour
     [SerializeField]
     Transform pointPrefab;
 
+    [SerializeField]
+    AudioSource chopSound;
+
 
     private Transform alien;
 
@@ -53,6 +56,7 @@ public class TreeClick : MonoBehaviour
         bananaJump();
 
         alien.GetComponent<NavMeshAgent>().enabled = true;
+        alien.GetComponent<Move>().enabled = true;
         
         isCuttingTree = false;
 
@@ -114,7 +118,7 @@ public class TreeClick : MonoBehaviour
             if (Input.GetMouseButtonDown(0)){
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hitMouse)){
-                    if (hitMouse.transform == treeChop){      
+                    if (hitMouse.transform == treeChop){
                         cutAction();
                     }
                 }
@@ -132,11 +136,14 @@ public class TreeClick : MonoBehaviour
     void cutAction(){
         if(!animator.GetBool("isCutting")){
             animator.SetBool("isCutting", true);
+            chopSound.Play();
             counter++;
+            return ;
         }
         if (animator.GetBool("isCutting") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5)
         {
             animator.Play("AlienArmature|Alien_SwordSlash 0", -1, 0.0f);
+            chopSound.Play();
             counter++;
         }
     }

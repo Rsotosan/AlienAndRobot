@@ -33,7 +33,6 @@ public class LightingManager : MonoBehaviour
             TimeOfDay %= 24; //clamp between 0-24
             UpdateLighting(TimeOfDay / 24f);
 
-            Debug.Log(TimeOfDay);
             if (TimeOfDay >= 23.50f)
             {
                 isDayFinished = true;
