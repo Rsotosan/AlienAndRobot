@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5330170972065249519
+--- !u!1 &7208052339150543781
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3750530912494523766}
-  - component: {fileID: 7763204642521016229}
-  - component: {fileID: 7783342346598954099}
-  - component: {fileID: 6806786624074041850}
-  - component: {fileID: 1640804621078235931}
-  - component: {fileID: 6322700193379658408}
+  - component: {fileID: 1872434036000585276}
+  - component: {fileID: 5065641753945638127}
+  - component: {fileID: 4752225096426903353}
+  - component: {fileID: 8324384346024815280}
+  - component: {fileID: 4266589139832531025}
+  - component: {fileID: 8812991932025391586}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: test
   m_TagString: Banana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3750530912494523766
+--- !u!4 &1872434036000585276
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95, y: 5.53, z: 323.69397}
+  m_GameObject: {fileID: 7208052339150543781}
+  m_LocalRotation: {x: 0.19679944, y: 0.71359706, z: 0.17874987, w: 0.6481495}
+  m_LocalPosition: {x: -129.605, y: -71.655, z: 297.967}
   m_LocalScale: {x: 0.4, y: 0.3, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7763204642521016229
+  m_LocalEulerAnglesHint: {x: 0, y: 95.503, z: 30.836}
+--- !u!33 &5065641753945638127
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
+  m_GameObject: {fileID: 7208052339150543781}
   m_Mesh: {fileID: 4300000, guid: 7c3f1490a119e0549b90b9533d8aeb59, type: 3}
---- !u!23 &7783342346598954099
+--- !u!23 &4752225096426903353
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
+  m_GameObject: {fileID: 7208052339150543781}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70aade91b684c254a9e20bc0dc9b7957, type: 2}
+  - {fileID: 2100000, guid: a4783c27372cdad41b92be4c303111fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,26 +86,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6806786624074041850
+--- !u!135 &8324384346024815280
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
+  m_GameObject: {fileID: 7208052339150543781}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1640804621078235931
+--- !u!54 &4266589139832531025
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
+  m_GameObject: {fileID: 7208052339150543781}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -115,20 +115,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6322700193379658408
+--- !u!114 &8812991932025391586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330170972065249519}
+  m_GameObject: {fileID: 7208052339150543781}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c61b854aadd4f439a40df50a1c987d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minForce: 2
-  maxForce: 6
+  maxForce: 5
   greenMaterial: {fileID: 2100000, guid: a4783c27372cdad41b92be4c303111fe, type: 2}
   yellowMaterial: {fileID: 2100000, guid: 2c8b112ad5110c3418cdbdc2b1d4973b, type: 2}
   redMaterial: {fileID: 2100000, guid: e935614adce7da5429d47fc1a8e75843, type: 2}
