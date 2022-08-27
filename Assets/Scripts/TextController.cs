@@ -1,7 +1,8 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class TextController : MonoBehaviour
     GameObject robotButton;
     [SerializeField]
     GameObject alienButton;
+    [SerializeField]
+    string firstText;
+    [SerializeField]
+    string nextSceneToLoad;
     
 
     //botonalien
@@ -28,7 +33,7 @@ public class TextController : MonoBehaviour
     void Start()
     {
  
-        robotDialogue.text = "Haz click en cualquier lugar de la pantalla para iniciar el diálogo";
+        robotDialogue.text = firstText;
         alienDialogue.text = "";
         alienButton.SetActive(false);
     }
@@ -48,40 +53,35 @@ public class TextController : MonoBehaviour
 
             if (counter <= texts.Count)
             {
-     
-
                 string[]dividedText = texts[counter].Split(";",2);
-
-
                 string key = dividedText[0];
                 string text = dividedText[1];
-
-
                 if (key.Equals("1"))
-                {
-                    alienButton.SetActive(false);
-                    robotButton.SetActive(true);
-                    robotDialogue.text = text;
-                    state = false;
-                }
+                    {
+                        alienButton.SetActive(false);
+                        robotButton.SetActive(true);
+                        robotDialogue.text = text;
+                        state = false;
+                    }
 
                 if (key.Equals("2"))
-                {
-                    robotButton.SetActive(false);
-                    alienButton.SetActive(true);
-                    alienDialogue.text = text;
-                    state = false;
+                    {
+                        robotButton.SetActive(false);
+                        alienButton.SetActive(true);
+                        alienDialogue.text = text;
+                        state = false;
+                    }
+      
                 }
-                
-
-                }
-       
-            }
             else
             {
+                SceneManager.LoadScene(nextSceneToLoad);
                 Debug.Log("Se acabaron las líneas de díalogo");
                 state = false;
             }
+
+        }
+            
           
 
         }
