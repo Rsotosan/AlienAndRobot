@@ -18,7 +18,7 @@ public class LightingManager : MonoBehaviour
     public static bool isDayFinished;
     void Start()
     {
-        
+        isDayFinished = false;
     }
 
     // Update is called once per frame
@@ -29,9 +29,9 @@ public class LightingManager : MonoBehaviour
 
         if(Application.isPlaying &&  !isDayFinished)
         {
-            TimeOfDay += Time.deltaTime * 0.1f;
+            TimeOfDay += Time.deltaTime * 0.25f;
             TimeOfDay %= 24; //clamp between 0-24
-            UpdateLighting(TimeOfDay / 24f);
+            //UpdateLighting(TimeOfDay / 24f);
 
             if (TimeOfDay >= 23.50f)
             {
@@ -42,7 +42,7 @@ public class LightingManager : MonoBehaviour
         }
         else
         {
-            UpdateLighting(TimeOfDay / 24f);
+            //UpdateLighting(TimeOfDay / 24f);
         }
     }
 

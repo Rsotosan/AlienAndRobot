@@ -157,10 +157,10 @@ RectTransform:
   m_Father: {fileID: 857488062}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20412, y: -30.704}
-  m_SizeDelta: {x: 619.41, y: 619.41}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -46.1}
+  m_SizeDelta: {x: 0, y: 92.208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89884642
 MonoBehaviour:
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_text: A spaceship arrives to a strange planet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
-  m_sharedMaterial: {fileID: 4833476452115874024, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
+  m_sharedMaterial: {fileID: -1806710454065926305, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_text: In the distance he spots an alien figure
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
-  m_sharedMaterial: {fileID: 4833476452115874024, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1091321117
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_text: A menacing-looking robot gets off the spaceship
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
-  m_sharedMaterial: {fileID: 4833476452115874024, guid: 195e021e230148049b52b58f7a1ded20, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1141631205
@@ -898,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1603801866
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1043,10 +1043,10 @@ RectTransform:
   m_Father: {fileID: 857488062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20389, y: -30.704}
-  m_SizeDelta: {x: 619.4078, y: 619.4078}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1.1577148, y: -43.841995}
+  m_SizeDelta: {x: -3.2764893, y: 96.72351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735088059
 MonoBehaviour:
@@ -1119,10 +1119,10 @@ RectTransform:
   m_Father: {fileID: 857488062}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20389, y: -30.704}
-  m_SizeDelta: {x: 619.4078, y: 619.4078}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1.3978882, y: -46.10199}
+  m_SizeDelta: {x: -2.7962, y: 92.203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794986615
 MonoBehaviour:

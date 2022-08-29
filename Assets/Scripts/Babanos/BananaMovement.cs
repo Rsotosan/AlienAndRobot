@@ -134,7 +134,6 @@ public class BananaMovement : MonoBehaviour
         {
             Destroy(this.gameObject);
             babanoCounter++;
-            Debug.Log(babanoCounter);
             babanoUi.text = "X " + babanoCounter;
         }
     }

@@ -19,7 +19,13 @@ public class TextController : MonoBehaviour
     [SerializeField]
     string firstText;
     [SerializeField]
-    string nextSceneToLoad;
+    public string nextSceneToLoad;
+
+    [SerializeField]
+    AudioSource alienVoice;
+
+    [SerializeField]
+    AudioSource robotVoice;
     
 
     //botonalien
@@ -32,7 +38,7 @@ public class TextController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
- 
+        if(robotVoice != null) robotVoice.Play();
         robotDialogue.text = firstText;
         alienDialogue.text = "";
         alienButton.SetActive(false);
@@ -50,7 +56,7 @@ public class TextController : MonoBehaviour
         }
         if (state)
         {
-
+            Debug.Log(counter + " " + texts.Count);
             if (counter <= texts.Count)
             {
                 string[]dividedText = texts[counter].Split(";",2);
@@ -58,6 +64,7 @@ public class TextController : MonoBehaviour
                 string text = dividedText[1];
                 if (key.Equals("1"))
                     {
+                        if(robotVoice != null) robotVoice.Play();
                         alienButton.SetActive(false);
                         robotButton.SetActive(true);
                         robotDialogue.text = text;
@@ -66,17 +73,25 @@ public class TextController : MonoBehaviour
 
                 if (key.Equals("2"))
                     {
+                        if(alienVoice != null) alienVoice.Play();
                         robotButton.SetActive(false);
                         alienButton.SetActive(true);
                         alienDialogue.text = text;
                         state = false;
                     }
-      
+                if (key.Equals("3"))
+                    {
+                        alienButton.SetActive(false);
+                        robotButton.SetActive(true);
+                        robotDialogue.text = "You brought me " + BabanosUI.babanoCounter +" babanos. I still have " +  (BabanosUI.babanoGoal - BabanosUI.babanoTotal) + " to go";
+                        BabanosUI.babanoCounter = 0;
+                        state = false;
+                    }
                 }
             else
             {
                 SceneManager.LoadScene(nextSceneToLoad);
-                Debug.Log("Se acabaron las líneas de díalogo");
+                Debug.Log("Se acabaron las lï¿½neas de dï¿½alogo");
                 state = false;
             }
 

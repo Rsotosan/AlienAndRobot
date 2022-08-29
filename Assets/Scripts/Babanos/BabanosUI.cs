@@ -8,7 +8,10 @@ public class BabanosUI : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI babanoUi;
 
-    private int babanoCounter = 0;
+    public static int babanoCounter = 0;
+    public static int babanoGoal = 80;
+
+    public static int babanoTotal = 0;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,7 +33,6 @@ public class BabanosUI : MonoBehaviour
             else
             {
                 babanoCounter++;
-                Debug.Log(babanoCounter);
                 babanoUi.text = "X " + babanoCounter;
             }
            

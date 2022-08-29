@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroController : MonoBehaviour
 {
@@ -9,10 +10,15 @@ public class IntroController : MonoBehaviour
     public List<GameObject> images;
 
     [SerializeField]
+    public string nextScene = "HouseScene";
+
+    [SerializeField]
     List<GameObject> texts;
 
     GameObject actualImage;
     GameObject actualText;
+
+
 
     void Start() {
         actualImage = images[0];
@@ -31,13 +37,15 @@ public class IntroController : MonoBehaviour
             if(images.Count > 0){
                 actualImage = images[0];
                 images.Remove(actualImage);
-                actualText = texts[0];
-                texts.Remove(actualText);
-                actualImage.SetActive(true);
-                actualText.SetActive(true);
+                if(texts[0] != null){
+                    actualText = texts[0];
+                    texts.Remove(actualText);
+                    actualImage.SetActive(true);
+                    actualText.SetActive(true);
+                }
 
             } else {
-                
+                SceneManager.LoadScene(nextScene);
             }
         }
     }
